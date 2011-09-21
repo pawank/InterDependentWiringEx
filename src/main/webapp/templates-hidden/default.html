@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:lift="http://liftweb.net/">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="language" content="en" />
+        <title></title>
+        <link href="/css/style.css" rel="stylesheet" type="text/css" media="screen"></link>
+        <script src="/js/modernizr-1.1.min.js"></script>
+        <script id="jquery" src="/classpath/jquery.js" type="text/javascript"></script>
+        <script id="json" src="/classpath/json.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header class="top_logo">
+            <h3>RETAIL SHOP</h3>
+                            <lift:TestCond.loggedin>
+                            <a href="/user_mgt/logout">Logout</a>
+                </lift:TestCond.loggedin>
+            
+        </header>
+        <header id="site_head"><!--useful to create the 960px limit-->
+            <div class="header_cont">
+                <h1>RETAIL SHOP</h1>
+
+                <nav class="head_nav">
+				<lift:Menu.builder ul:class="menu" li_item:class="current" group="public"></lift:Menu.builder>
+                </nav>
+            </div>
+        </header>
+        <div id="main_content"><!--useful to create the 960px limit-->
+            <lift:bind name="content"></lift:bind>
+            <div class="line"></div>
+            <footer class="bottom">
+            </footer>
+        </div>
+
+    </body>
+</html>

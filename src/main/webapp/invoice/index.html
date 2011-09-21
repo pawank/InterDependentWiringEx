@@ -1,0 +1,12 @@
+<lift:surround with="default" at="content">
+	<div>
+    Welcome to Invoicing Screen
+  </div>
+     <div class="itemhead"><label>Item Code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label>Item Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label>Brand&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label>Unit Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label>Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label>Taxable?</label></div>
+  <div id="invoice_items" class="lift:Invoicing.showProductItems">retail item records goes here</div>
+  <div><div class="lift:Invoicing.addProductItem?div=invoice_items">Add Item</div></div>
+  <div>Subtotal: <span class="lift:Invoicing.subtotal">subtotal</span></div>
+  <div>Tax: <span class="lift:Invoicing.tax">Tax</span></div>
+  <div>Total: <span class="lift:Invoicing.total">Total</span></div>
+   
+</lift:surround>
